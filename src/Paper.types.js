@@ -19,6 +19,7 @@ const PAPER = {
   Rectangle: 'Rectangle',
   Circle: 'Circle',
   PointText: 'PointText',
+  Raster: 'Raster',
 };
 
 export const CONSTANTS = {
@@ -39,6 +40,7 @@ const TYPES: Types = {
     ...props,
     content: children,
   }),
+  [CONSTANTS.Raster]: (props, paper) => new paper.Raster(props),
 };
 
 export default TYPES;
@@ -58,4 +60,5 @@ export const {
   Rectangle,
   Circle,
   PointText,
+  Raster,
 } = components;
